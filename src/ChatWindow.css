@@ -1,0 +1,153 @@
+/* =========================
+   CHAT WINDOW ROOT
+========================= */
+.chatWindow {
+  flex: 1;
+  height: 100%;
+  background: #1f1f1f;
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   TOP NAVBAR
+========================= */
+.navbar {
+  height: 56px;
+  background: #1f1f1f;
+  border-bottom: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  font-size: 14px;
+}
+
+.navbar span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.userIconDiv {
+  width: 32px;
+  height: 32px;
+  background: #2a2a2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   CHAT AREA CONTAINER
+   (Chat.jsx handles inner styling)
+========================= */
+.chatArea {
+  flex: 1;
+  display: flex;          /* ✅ REQUIRED */
+  flex-direction: column;/* ✅ REQUIRED */
+  overflow-y: auto;
+}
+
+
+/* Smooth scrollbar */
+.chatArea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatArea::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+/* =========================
+   LOADER
+========================= */
+.loader {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+/* =========================
+   INPUT SECTION (BOTTOM)
+========================= */
+.chatInput {
+  padding: 16px;
+  border-top: 1px solid #2a2a2a;
+  background: #1f1f1f;
+}
+
+/* Input container */
+.userInput {
+  max-width: 720px;        /* ChatGPT-like width */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  border-radius: 14px;
+  padding: 12px 14px;
+  gap: 10px;
+}
+
+/* Text input */
+.userInput input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e5e7eb;
+  font-size: 15px;
+}
+
+.userInput input::placeholder {
+  color: #9ca3af;
+}
+
+/* Send button */
+#submit {
+  width: 36px;
+  height: 36px;
+  background: #10a37f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#submit:hover {
+  background: #0e8f6e;
+}
+
+#submit i {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* =========================
+   FOOTER INFO TEXT
+========================= */
+.info {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+
+.authOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}

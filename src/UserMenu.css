@@ -1,0 +1,44 @@
+/* =========================
+   USER ICON CONTAINER
+========================= */
+.userIconDiv {
+  position: relative;
+  cursor: pointer;
+}
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+.userMenu {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  width: 140px;
+  padding: 6px 0;
+  display: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+/* SHOW MENU ON HOVER */
+.userIconDiv:hover .userMenu {
+  display: block;
+}
+
+/* =========================
+   MENU ITEMS
+========================= */
+.userMenu p {
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.userMenu p:hover {
+  background-color: #333;
+}
